@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.1</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.CPP</ToolchainName>
+    <ProjectGuid>{ae7707b5-cbda-4876-815a-b0c907a0a950}</ProjectGuid>
+    <avrdevice>ATSAM4E8E</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>Detector6</AssemblyName>
+    <Name>Detector6</Name>
+    <RootNamespace>Detector6</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.11.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+        <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+        <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+        <armgcc.common.outputfiles.eep>False</armgcc.common.outputfiles.eep>
+        <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+        <armgcc.common.outputfiles.srec>False</armgcc.common.outputfiles.srec>
+        <armgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>TARGET_ATSAM4E</Value>
+            <Value>DEFAULT_STACK_SIZE=512</Value>
+          </ListValues>
+        </armgcc.compiler.symbols.DefSymbols>
+        <armgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam4e\include</Value>
+            <Value>../Source</Value>
+          </ListValues>
+        </armgcc.compiler.directories.IncludePaths>
+        <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
+        <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+        <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+        <armgcc.compiler.miscellaneous.OtherFlags>-std=gnu11 -mfpu=fpv4-sp-d16 -mfloat-abi=hard</armgcc.compiler.miscellaneous.OtherFlags>
+        <armgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>TARGET_ATSAM4E</Value>
+            <Value>DEFAULT_STACK_SIZE=512</Value>
+          </ListValues>
+        </armgcccpp.compiler.symbols.DefSymbols>
+        <armgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam4e\include</Value>
+            <Value>../Source</Value>
+          </ListValues>
+        </armgcccpp.compiler.directories.IncludePaths>
+        <armgcccpp.compiler.optimization.level>Optimize (-O1)</armgcccpp.compiler.optimization.level>
+        <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
+        <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+        <armgcccpp.compiler.miscellaneous.OtherFlags>-std=gnu++11 -mfpu=fpv4-sp-d16 -mfloat-abi=hard</armgcccpp.compiler.miscellaneous.OtherFlags>
+        <armgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+            <Value>libRTX_CM4</Value>
+          </ListValues>
+        </armgcccpp.linker.libraries.Libraries>
+        <armgcccpp.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>../</Value>
+          </ListValues>
+        </armgcccpp.linker.libraries.LibrarySearchPaths>
+        <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+        <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsam4e8.ld -mfpu=fpv4-sp-d16 -mfloat-abi=hard</armgcccpp.linker.miscellaneous.LinkerFlags>
+        <armgcccpp.assembler.general.AssemblerFlags>-mfpu=fpv4-sp-d16 -mfloat-abi=hard</armgcccpp.assembler.general.AssemblerFlags>
+        <armgcccpp.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam4e\include</Value>
+          </ListValues>
+        </armgcccpp.assembler.general.IncludePaths>
+        <armgcccpp.assembler.debugging.DebugLevel>Default (-g)</armgcccpp.assembler.debugging.DebugLevel>
+        <armgcccpp.preprocessingassembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+            <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam4e\include</Value>
+          </ListValues>
+        </armgcccpp.preprocessingassembler.general.IncludePaths>
+        <armgcccpp.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.preprocessingassembler.debugging.DebugLevel>
+      </ArmGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Source\camera_thread.cpp">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Source\camera_thread.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="Source\define.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\base\serial.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\base\serial.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\camera.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\camera.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\critical_section.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\gpio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\nvic.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\nvic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\uart.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\udc\conf_usb.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\udc\udc.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\udc\udc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\udc\udd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\udc\udp_device.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\udc\udp_device.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\driver\udc\ui.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="Source\driver\usb_device.cpp">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Source\driver\usb_device.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Source\driver\usb_serial.cpp">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Source\driver\usb_serial.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Source\driver\usb_struct.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="Source\driver\udc\usb_protocol.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\main_thread.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\rtx\cmsis_os.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\rtx\RTX_CM_lib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\rtx\RTX_Conf_CM.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\startup\heap.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\startup\isr_vectors.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\startup\reset_handler.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\startup\stack.S">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Source" />
+    <Folder Include="Source\driver" />
+    <Folder Include="Source\driver\base\" />
+    <Folder Include="Source\driver\udc" />
+    <Folder Include="Source\rtx" />
+    <Folder Include="Source\startup" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

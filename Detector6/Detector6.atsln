@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Detector6", "Detector6.cppproj", "{AE7707B5-CBDA-4876-815A-B0C907A0A950}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE7707B5-CBDA-4876-815A-B0C907A0A950}.Debug|ARM.ActiveCfg = Debug|ARM
+		{AE7707B5-CBDA-4876-815A-B0C907A0A950}.Debug|ARM.Build.0 = Debug|ARM
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
